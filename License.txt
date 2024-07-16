@@ -1,0 +1,26 @@
+[Setup]
+AppName=Unsplash Wallpaper Changer
+AppVersion=0.0.3
+DefaultDirName={pf}\UnsplashWallpaperChanger
+DefaultGroupName=Unsplash Wallpaper Changer
+UninstallDisplayIcon={app}\UnsplashWallpaperChanger.exe
+OutputDir=.
+OutputBaseFilename=UnsplashWallpaperChangerSetup
+Compression=lzma
+SolidCompression=yes
+LicenseFile=License.txt  ; Specify the filename of your license file here
+
+[Languages]
+Name: "english"; MessagesFile: "compiler:Default.isl"
+
+[Files]
+Source: "dist\unsplash_wallpaper_changer_gui.exe"; DestDir: "{app}"; Flags: ignoreversion
+
+[Icons]
+Name: "{group}\Unsplash Wallpaper Changer"; Filename: "{app}\unsplash_wallpaper_changer_gui.exe"
+Name: "{group}\Uninstall Unsplash Wallpaper Changer"; Filename: "{uninstallexe}"
+
+[Run]
+Filename: "{app}\unsplash_wallpaper_changer_gui.exe"; Description: "{cm:LaunchProgram,Unsplash Wallpaper Changer}"; Flags: nowait postinstall skipifsilent
+
+
